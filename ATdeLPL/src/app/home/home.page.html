@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input type="number" label="Valor da prestacao" labelPlacement="floating"
+    placeholder="valor da prestacao" [(ngModel)]="valordaprestacao"></ion-input>
+    </ion-item>
+    <ion-range labelPlacement="start" label="TaxaDeJuros" [pin]="true"
+    [pinFormatter]="pinFormatterJuros" min="1" max="100" step="1"
+    [(ngModel)]="TaxaJuros"></ion-range>
+    <ion-range labelPlacement="start" label="Meses Atrasados" [pin]="true"
+    [pinFormatter]="pinFormatterAtraso" min="1" max="250" step="1"
+    [(ngModel)]="atrasoMeses"></ion-range>
+    <ion-button expand="block" (click)="calcularPrestacao()">
+      <ion-icon name="heart-circle-outline" slot="start"></ion-icon>
+    </ion-button>
+
+    <ion-item>
+      <ion-label>Valor a ser convertido: {{ somatotal }}</ion-label>
+      </ion-item>
+
+</ion-content>
