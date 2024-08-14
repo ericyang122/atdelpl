@@ -5,9 +5,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tela-confirmar</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-label>sua prestacao é de ${{ valordaprestacao }}</ion-label> <br>
+  <ion-label>a taxa de juros é de {{ TaxaJuros }}% </ion-label><br>
+  <ion-label>seus meses de atraso são {{ atrasoMeses }}</ion-label><br>
+  <ion-label>Valor a ser convertido: $ {{ somatotal }}</ion-label>
 </ion-content>

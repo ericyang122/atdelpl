@@ -12,7 +12,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'tela-confirmar',
+    path: 'tela-confirmar/:somatotal/:atrasoMeses/:TaxaJuros/:valordaprestacao',
     loadChildren: () => import('./tela-confirmar/tela-confirmar.module').then( m => m.TelaConfirmarPageModule)
   },
 ];
