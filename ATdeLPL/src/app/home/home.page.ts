@@ -12,16 +12,14 @@ export class HomePage {
   atrasoMeses: number = 0;
   somatotal: number = 0;
 
-  constructor(public router: Router) {} // Adicionando Router ao construtor
-
+  constructor(public router: Router) {} 
   calcularPrestacao() {
-    if (this.valordaprestacao > 0 && this.TaxaJuros > 0 && this.atrasoMeses > 0) {
-      this.somatotal = this.valordaprestacao * Math.pow((1 + this.TaxaJuros / 100), this.atrasoMeses);
+    if (i++ < this.atrasoMeses) {
+       this.somatotal = this.valordaprestacao + (TaxaJuros/100)
 
-      // Formatar somatotal com duas casas decimais
+
       const somatotalFormatted = this.somatotal.toFixed(2);
 
-      // Navegar para a nova página com a ordem correta dos parâmetros
       this.router.navigate(['/tela-confirmar', somatotalFormatted, this.atrasoMeses, this.TaxaJuros, this.valordaprestacao])
         .then(success => {
           if (success) {
